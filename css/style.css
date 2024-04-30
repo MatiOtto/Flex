@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+
+.container1 {
+    background-color: red;
+    width: 1200px;
+    height: 200px;
+    /*Display Flex solo se utiliza en el contenedor padre*/
+    display: flex;
+    /*Acomodo vertical*/
+    align-items: stretch;
+    /*Center: los coloca en el centor y tamaño original. Flex start: los coloca al principio.
+    Flex end: los coloca al final*/
+    justify-content: flex-start;
+    /*Acomodo horizontal.flex-start: al comienzo. flex-end:al final.
+    center:centro.
+    space-between:estan separados al maximo.
+    space-around: separados de igual manera.
+    space-evenly:separados de igual manera en todos los sentidos*/
+    flex-direction: row-reverse;/*row, row-reverse, column, column-reverse*/
+}
+
+.container1 > div {
+    width: 200px;
+    background-color: yellow;
+}
+
+.container2 {
+    background-color: purple;
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+
+.container2 > div {
+    background-color: silver;
+    flex: 1;
+}
+
+div.section2 {
+    flex:2;
+}
+/*
+section1 = 1 -> 1/4
+section2 = 2 -> 1/2
+section3 = 1 -> 1/4
+TOTAL: 4 
+*/
